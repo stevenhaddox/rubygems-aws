@@ -1,4 +1,8 @@
 {
-  "run_list": ["role[rubygems_db_master]", "role[vagrant]"]
+  "run_list": ["role[rubygems_db_master]", "role[vagrant]"],
+  "postgresql": {
+    "data_directory": "/var/lib/postgresql/9.2/main",
+    "listen_addresses": "0.0.0.0"
+  }
 }
 
