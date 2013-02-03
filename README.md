@@ -16,8 +16,8 @@ You will need to populate a chef databag for the application parameters, `chef/d
       "application": {
         "vagrant": {
           "rails_postgresql_host" : "33.33.33.12",
-          "rails_postgresql_db": "rubygems-vagrant",
-          "rails_postgresql_user": "rubygems-db-user",
+          "rails_postgresql_db": "gemcutter_vagrant",
+          "rails_postgresql_user": "postgres",
           "rails_postgresql_password": "totally insecure",
           "s3_key": "",
           "s3_secret": "",
@@ -28,7 +28,7 @@ You will need to populate a chef databag for the application parameters, `chef/d
           "new_relic_app_name" : ""
         }
       }
-    }
+    }    
 After the file is populated, run:
 
     $ cap chef
