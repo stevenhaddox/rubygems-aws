@@ -8,10 +8,29 @@ Chef cookbooks and bootstrap scripts to configure and manage Rubygems.org AWS in
 
     $ bundle install
     $ librarian-chef install
-
-### Hacking in Vagrant
-
     $ vagrant up
+You will need to populate a chef databag for the application parameters, `chef/data_bags/secrets/rubygems.json`:
+
+    {
+      "id": "rubygems",
+      "application": {
+        "vagrant": {
+          "rails_postgresql_host" : "33.33.33.12",
+          "rails_postgresql_db": "rubygems-vagrant",
+          "rails_postgresql_user": "rubygems-db-user",
+          "rails_postgresql_password": "totally insecure",
+          "s3_key": "",
+          "s3_secret": "",
+          "secret_token" : "",
+          "bundler_token": "",
+          "bundler_api_url" : "",
+          "new_relic_license_key" : "",
+          "new_relic_app_name" : ""
+        }
+      }
+    }
+After the file is populated, run:
+
     $ cap chef
 
 ### Hacking on EC2
