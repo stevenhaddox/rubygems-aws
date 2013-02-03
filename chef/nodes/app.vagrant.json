@@ -6,8 +6,8 @@
   "application": {
     "name": "rubygems",
     "repository": "https://github.com/rubygems/rubygems.org.git",
-    "rails_env": "staging",
-    "rails_root": "/applications/rubygems/staging",
+    "rails_env": "vagrant",
+    "rails_root": "/applications/rubygems/vagrant",
     "server_names": ["rubygems.phlippers.net"],
     "use_ssl": true,
     "force_ssl": true,
@@ -17,6 +17,13 @@
       "name": "thin",
       "concurrency": 4
     }
+  },
+  
+  // Override default monitors because we're not running postgres on app server
+  "monit": {
+    "monitors": [
+      "cron", "filesystem", "ntp", "postfix", "redis", "nginx", "memcached"
+    ]
   },
 
   "environment_variables": {

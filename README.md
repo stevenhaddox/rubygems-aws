@@ -34,6 +34,7 @@ Note: I'm currently not happy with this, as we have the database name in three p
 * `chef/data_bags/secrets/rubygems.json`
 * `chef/nodes/dbmaster.vagrant.json`
 * `chef/roles/rubygems_db_master.rb`
+
 This is not optimal, and will need a refactor.
 
 After the file is populated, run:
