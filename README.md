@@ -28,7 +28,14 @@ You will need to populate a chef databag for the application parameters, `chef/d
           "new_relic_app_name" : ""
         }
       }
-    }    
+    }
+
+Note: I'm currently not happy with this, as we have the database name in three places:
+* `chef/data_bags/secrets/rubygems.json`
+* `chef/nodes/dbmaster.vagrant.json`
+* `chef/roles/rubygems_db_master.rb`
+This is not optimal, and will need a refactor.
+
 After the file is populated, run:
 
     $ cap chef
