@@ -12,7 +12,10 @@
     ]
   },
   "application": {
-    "rails_env": "vagrant"
+    "rails_env": "vagrant",
+    "rails_root": "/applications/rubygems/vagrant",
+    "server_names": ["rubygems.phlippers.net"],
+    "name": "rubygems"
   }
 }
 

@@ -53,6 +53,8 @@ cookbook "ntp"
 
 cookbook "openssh"
 
+cookbook "openssl"
+
 cookbook "postfix"
 
 cookbook "postgresql",

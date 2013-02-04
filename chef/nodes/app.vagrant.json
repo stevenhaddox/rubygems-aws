@@ -53,14 +53,5 @@
     "user":   "memcache",
     "port":   11211,
     "listen": "127.0.0.1"
-  },
-
-  // postgresql
-  "postgresql": {
-    "version": "9.2",
-    "ssl": false,
-    "pg_hba": [
-      "host rubygems_staging rubygems 127.0.0.1/32 password"
-    ]
   }
 }
