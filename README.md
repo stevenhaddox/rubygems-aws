@@ -8,13 +8,15 @@ Chef cookbooks and bootstrap scripts to configure and manage Rubygems.org AWS in
 
     $ bundle install
     $ librarian-chef install
+
+### Hacking on Vagrant
     $ vagrant up
 You will need to populate a chef databag for the application parameters, `chef/data_bags/secrets/rubygems.json`:
 
     {
       "id": "rubygems",
       "application": {
-        "vagrant": {
+        "staging": {
           "rails_postgresql_host" : "33.33.33.12",
           "rails_postgresql_db": "gemcutter_vagrant",
           "rails_postgresql_user": "postgres",
@@ -32,7 +34,7 @@ You will need to populate a chef databag for the application parameters, `chef/d
 
 Note: I'm currently not happy with this, as we have the database name in three places:
 * `chef/data_bags/secrets/rubygems.json`
-* `chef/nodes/dbmaster.vagrant.json`
+* `chef/nodes/dbmaster.staging.json`
 * `chef/roles/rubygems_db_master.rb`
 
 This is not optimal, and will need a refactor.
