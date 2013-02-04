@@ -6,8 +6,8 @@
   "application": {
     "name": "rubygems",
     "repository": "https://github.com/rubygems/rubygems.org.git",
-    "rails_env": "vagrant",
-    "rails_root": "/applications/rubygems/vagrant",
+    "rails_env": "staging",
+    "rails_root": "/applications/rubygems/staging",
     "server_names": ["rubygems.phlippers.net"],
     "use_ssl": true,
     "force_ssl": true,
@@ -28,8 +28,8 @@
 
   "environment_variables": {
     // Rails application settings
-    "RAILS_ENV":  "staging",
-    "RACK_ENV":   "staging",
+    "RAILS_ENV":  "vagrant",
+    "RACK_ENV":   "vagrant",
     "REDIS_URL":  "redis://localhost:6379/0",
 
     // OpenSSH server timeout

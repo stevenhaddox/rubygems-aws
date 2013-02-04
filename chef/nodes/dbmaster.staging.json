@@ -1,0 +1,11 @@
+{
+  "run_list": ["role[rubygems_db_master]", "recipe[rubygems::database]", "role[vagrant]"],
+
+  "application": {
+    "rails_env": "staging",
+    "rails_root": "/applications/rubygems/staging",
+    "server_names": ["rubygems.phlippers.net"],
+    "name": "rubygems"
+  }
+}
+

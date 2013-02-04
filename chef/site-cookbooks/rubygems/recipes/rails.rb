@@ -61,6 +61,7 @@ application "rubygems" do
   owner "deploy"
   group "deploy"
   packages %w{libpq-dev}
+  environment_name node["application"]["rails_env"]
   migrate true
 
   r = rails do
