@@ -12,13 +12,12 @@ app                       = node["application"]
 rails_env                 = node["application"]["rails_env"]
 rails_root                = app['rails_root']
 app_env                   = "#{app['name']}-#{rails_env}"
-Chef::Log.warn app_env.inspect
 sudo_name                 = app_env.tr("-", "_").upcase
 bundle_cmd                = "bundle"
 first_server_name         = app["server_names"][0]
 db_name                   = app_env.tr("-", "_")
 rails_postgresql_user     = app["name"]
-Chef::Log.warn rails_postgresql_user.inspect
+
 
 hba_cidr = if node.attribute?('ec2')
              # ec2 private subnet
@@ -28,7 +27,7 @@ hba_cidr = if node.attribute?('ec2')
              "33.33.33.0/8"
            end
 
-node.set['postgresql']['listen_addresses'] = node['ipaddress']
+
 node.set['postgresql']['pg_hba'] = [{
   "type" => "host",
   "db" => db_name,

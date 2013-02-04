@@ -6,6 +6,10 @@
     "rails_root": "/applications/rubygems/staging",
     "server_names": ["rubygems.phlippers.net"],
     "name": "rubygems"
+  },
+  
+  "postgresql": {
+    "listen_addresses": "33.33.33.12"
   }
 }
 
