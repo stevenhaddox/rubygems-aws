@@ -18,7 +18,7 @@
       "concurrency": 4
     }
   },
-  
+
   // Override default monitors because we're not running postgres on app server
   "monit": {
     "monitors": [

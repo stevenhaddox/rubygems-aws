@@ -7,7 +7,7 @@
     "server_names": ["rubygems.dev"],
     "name": "rubygems"
   },
-  
+
   "postgresql": {
     "listen_addresses": "33.33.33.12"
   }
